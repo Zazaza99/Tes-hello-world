@@ -1,0 +1,27 @@
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu button {
+    /* Gaya tombol default */
+    padding: 10px 20px;
+    /* ... */
+}
+
+/* Media query untuk layar kecil */
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+    }
+    .menu button {
+        width: 100%; /* Membuat tombol memenuhi seluruh lebar container */
+    }
+}

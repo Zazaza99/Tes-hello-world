@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Halaman Bintang</title>
+    <link rel="stylesheet" href="coba wrap css.css">
+    <style>
+        @media screen and (max-width: 600px) { 
+            .header-wrapper {
+                flex-direction: column;
+            }
+            .menu {
+                width: 100%;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-wrapper">
+        <img class="logo" alt="logo-saya" src="113569587_p0.png" width="100px" height="100px">
+        <nav class="menu"> <button>Home</button>
+            <button>My Profile</button>
+            <button>Portofolio</button>
+            <button>Message Us</button>
+        </nav>
+    </header>
+    <div class="container">
+        </div>
+
+        <div>
+            <img
+              class="img-slideshow"
+              src="https://images.unsplash.com/photo-1731778573373-224ffc8a1316?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+              width="700" height="400">
+            <img 
+              class="img-slideshow"
+              src="https://images.unsplash.com/photo-1735598109398-763993d23997?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                width="700" height="400">
+            <img
+                class="img-slideshow"
+                src="https://images.unsplash.com/photo-1736506325808-62a1e77e6ea1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                width="700" height="400">
+            <button onclick="plusDivs(-1)">previous</button>
+            <button onclick="plusDivs(1)">next</button>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("img-slideshow");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                x[slideIndex-1].style.display = "block";  
+                console.log(slideIndex);
+            }
+
+            setInterval(() => {
+                plusDivs(1);
+            }, 5000);
+        </script>
+</body>
+</html>

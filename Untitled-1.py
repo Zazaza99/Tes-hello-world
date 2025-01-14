@@ -1,3 +1,0 @@
-ikan =True
-while 
-
